@@ -21,8 +21,9 @@ export async function getServerSideProps() {
   try {
     const imageOfTheDay = await fetcher();
     const last10DaysImages = await fetcher(
-      "&start_date=2023-03-25&end_date=2023-04-03"
+      "&start_date=2023-03-01&end_date=2023-03-10"
     );
+
     return {
       props: {
         imageOfTheDay,
