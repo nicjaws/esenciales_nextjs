@@ -11,17 +11,15 @@ const Last10DaysImages = ({ images }: Last10DaysImagesProps) => {
   return (
     <>
       <h2>Ultimos 10 dias</h2>
-      {images
-        ?.map((image, index) => (
-          <div key={image.title}>
-            <img
-              src={image.url}
-              alt={image.title}
-              onClick={() => router.push(`/image/${image.date}`)}
-            />
-          </div>
-        ))
-        .sort()}
+      {images?.map((image, index) => (
+        <div key={image.title}>
+          <img
+            src={image.url}
+            alt={image.title}
+            onClick={() => router.push(`/image/${image.date}`)}
+          />
+        </div>
+      ))}
     </>
   );
 };
